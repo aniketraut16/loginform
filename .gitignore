@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/forntend/node_modules
+/loginformfrontend/node_modules
 /Server/node_modules
 /.pnp
 .pnp.js

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&family=Raleway:wght@300&family=Tilt+Neon&family=Ubuntu&display=swap');
+
+.signinform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.608);
+    border-radius: 15px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    animation: animate 1s ease-in-out;
+
+    border-radius: 38px;
+    background: linear-gradient(145deg, #6e6aa0, #837ebe);
+    box-shadow: 12px 12px 26px #636090,
+        -12px -12px 26px #918cd4;
+}
+
+/* .signinform:hover {
+    background-color: rgba(114, 114, 114, 0.608);
+    box-shadow: 1px 1px 5px black;
+
+} */
+
+@keyframes animate {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -500%);
+    }
+
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+.signinform label {
+    font-size: 1.1em;
+}
+
+.signinform input:focus {
+    border-bottom: 2px solid rgb(31, 182, 238);
+
+}
+
+.link {
+    color: white;
+}
+
+.signinform p {
+    margin: 5px;
+}
+
+.signinform h1 {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.signinform button {
+    margin-top: 1.5em;
+    height: 2.5em;
+    background-color: rgb(46, 192, 237);
+    border: none;
+    box-shadow: 1px 1px 5px black;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.signinform button:hover {
+    background-color: rgb(0, 184, 239);
+}
+
+.signinform input {
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: white;
+    padding: 2px;
+    width: 20em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom right, violet, indigo, rgb(0, 154, 154), blue, rgb(0, 154, 154), indigo, violet);
+}
+
+/* .backgroundContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: 3.33%;
+    grid-auto-columns: 2.5%;
+
+}
+
+.backgroundContainer div {
+    width: 2.5%;
+    height: 3.33%;
+    border: 1px solid black;
+} */
+
+
+.backgroundContainer {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+}
+
+.backgroundContainer div {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: rgb(12, 66, 104);
+}
+
+.backgroundContainer div:hover {
+    background-color: rgb(17, 94, 148);
+    box-shadow: 1px 1px 1px black;
+}
+
+.alert {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+.fa-solid {
+    display: inline-block;
+    width: 20px;
+    position: relative;
+    top: 26%;
+    right: 7%;
+}
