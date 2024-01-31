@@ -5,15 +5,13 @@ const loginSchema = new mongoose.Schema({
   hashedPassword: String,
 });
 
-const dbUri = process.env.DB_URI;
+const dbUri = `${process.env.DB_URI}/backend`;
 
 
 async function connectToDatabase() {
   try {
-    await mongoose.connect(`${dbUri}/backend`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(databaseURI, { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 3000 });
+
     console.log("Successfully connected to MongoDB");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
