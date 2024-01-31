@@ -10,6 +10,7 @@ function Loginform() {
   const [message, setMessage] = useState("");
   const [isPasswordVisible, setisPasswordVisible] = useState(true);
   const navigate = useNavigate();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
@@ -34,7 +35,7 @@ function Loginform() {
         password,
       };
       axios
-        .post("http://localhost:8000/login", data)
+        .post(`${backendUrl}/login`, data)
         .then((response) => {
           setMessage(response.data.message);
           setAlertMsg(response.data.alertMsg);

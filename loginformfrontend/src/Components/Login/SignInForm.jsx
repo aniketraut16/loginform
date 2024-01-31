@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+require("./signinform.css");
 
 function Signinform() {
   const [name, setName] = useState("");
@@ -14,6 +15,7 @@ function Signinform() {
   const [isConfiremedPasswordVisible, setisConfiremedPasswordVisible] =
     useState(true);
   const navigate = useNavigate();
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   // Handle form input changes
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -63,7 +65,7 @@ function Signinform() {
           password,
         };
         axios
-          .post("http://localhost:8000/signin", data)
+          .post(`${backendUrl}/signin`, data)
           .then((response) => {
             setMessage(response.data.message);
             setAlertMsg(response.data.alertMsg);
