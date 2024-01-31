@@ -5,9 +5,12 @@ const loginSchema = new mongoose.Schema({
   hashedPassword: String,
 });
 
+const dbUri = process.env.DB_URI;
+
+
 async function connectToDatabase() {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/backend", {
+    await mongoose.connect(`${dbUri}/backend`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

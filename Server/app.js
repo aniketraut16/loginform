@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+require('dotenv').config();
+
+const port = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -18,6 +21,6 @@ app.use(indexRoutes);
 app.use(signinRoutes);
 app.use(loginRoutes);
 
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("Listening on port 8000");
 });
